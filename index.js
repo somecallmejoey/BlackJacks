@@ -3,15 +3,20 @@ let secondCard = 2;
 let sum = firstCard + secondCard;
 
 let hasBlackJack = true;
+let isAlive = true;
+let message = "";
 
 if (sum < 21) {
-  console.log("Do you want to draw a new card?");
+  message = "Do you want to draw a new card?";
 } else if (sum === 21) {
-  console.log("You win!");
+  message = "You win!";
   hasBlackJack = true;
 } else {
-  console.log("Lol no money for u get fucked");
+  message = "Lol no money for u get fucked";
+  isAlive = false;
 }
 
 // Cash out!
 console.log(hasBlackJack);
+console.log(isAlive);
+console.log(message);
