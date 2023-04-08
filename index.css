@@ -1,0 +1,55 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial,
+    sans-serif;
+  background-color: rgb(37, 85, 37);
+  background-size: cover;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(37, 85, 37);
+  width: 100%;
+  align-items: center;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+h1 {
+  padding: 1rem;
+  margin: 0;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+.message-el {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 0.3rem;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+
+  border-radius: 9px;
+}
+#btn-start {
+  background-color: goldenrod;
+  box-shadow: 10px;
+  border: 0;
+  border-radius: 0.2rem;
+  margin-top: 0.3rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  color: rgb(37, 85, 37);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+p {
+  margin: 0.3rem;
+}

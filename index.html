@@ -1,9 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jack Black</title>
   <head>
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
+   
   </head>
   <body>
-    Sigma male chad
+    <div class="wrapper">
+     
+        <h1 id="h1">Blackjack</h1>
+        <p class="message-el">Wanna play a round?</p>
+        
+        <div class="results">
+          <p id="cards-el">Cards:  </p>
+          <p id="sum-el"> </p>
+        </div>
+        <button id="btn-start" onclick="generateTwoCards() ; getRidOfButton() ; addNumbers()"> Start the game</button>
+        <script src="index.js"></script>
+    </div>
   </body>
 </html>
