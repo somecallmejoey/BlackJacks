@@ -1,39 +1,43 @@
-let cards = document.getElementById("cards-el");
-let btn = document.getElementById("btn-start");
-let wrapper = document.getElementsByClassName("wrapper");
-let sums = document.getElementById("sum-el");
+let firstCard = 10
+let secondCard = 4
+let cards = [firstCard, secondCard]
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
 
-let a = 0;
-let b = 0;
-function startGame(sum) {
-  if (sum < 21) {
-    message = "Do you want to draw a new card?";
-  } else if (sum === 21) {
-    message = "You win!";
-    hasBlackJack = true;
-  } else {
-    message = "Lol no money for u get fucked";
-    isAlive = false;
-  }
-  console.log(message);
+function startGame() {
+    renderGame()
 }
 
-function generateTwoCards() {
-  if (cards.textContent !== "") {
-    a = Math.floor(Math.random() * 11) + 1;
-    b = Math.floor(Math.random() * 11) + 1;
-
-    cards.textContent += "Cards: " + a + ", ";
-    cards.textContent += b;
-  }
+function renderGame() {
+    cardsEl.textContent = "Cards: "
+    // Create a for loop that renders out all the cards instead of just two
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
+    
+    sumEl.textContent = "Sum: " + sum
+    if (sum <= 20) {
+        message = "Do you want to draw a new card?"
+    } else if (sum === 21) {
+        message = "You've got Blackjack!"
+        hasBlackJack = true
+    } else {
+        message = "You're out of the game!"
+        isAlive = false
+    }
+    messageEl.textContent = message
 }
 
-function addNumbers() {
-  let sum = a + b;
 
-  sums.textContent += "Total =" + " " + sum;
-}
-
-function getRidOfButton() {
-  btn.remove();
+function newCard() {
+    let card = Math.floor(Math.random()* 10)
+    sum += card // sum = sum + card    // Push the card to the cards array
+    cards.push(card)
+    console.log(cards)
+    renderGame()
 }
